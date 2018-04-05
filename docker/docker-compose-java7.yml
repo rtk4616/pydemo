@@ -1,0 +1,18 @@
+version: '3'
+services:
+  java7:
+    image: java:7
+    #restart: always
+    ports:
+      - "8180:8080"
+      - "18999:18999"
+    volumes:
+      - E:/test-111/tomcat8.5-linux:/usr/local/tomcat
+    command: /usr/local/tomcat/bin/catalina.sh run
+    #command: /bin/sh
+    deploy:
+      resources:
+        limits:
+          #cpus: '0.083'
+          cpus: '1.0'
+          memory: 2048M

@@ -1,0 +1,13 @@
+version: '3'
+services:
+  mysql:
+    image: mysql
+    restart: always
+    environment: 
+      MYSQL_ROOT_PASSWORD: 1234
+    ports:
+      - "3306:3306"
+    volumes:
+      - E:/techcenter/mysqldata:/var/lib/mysql
+
+  
